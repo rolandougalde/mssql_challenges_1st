@@ -41,13 +41,13 @@ GROUP BY EmployeeID, ShipCountry
 
 -- 19. Obtain a report that shows the number of orders for each Sales Representative.
 
-SELECT EmployeeID, COUNT(OrderID) AS 'Many Orders'
+SELECT 
+	EmployeeID AS 'Vendor ID', 
+	COUNT(OrderID) AS 'Many Orders'
 FROM Orders
 WHERE ShipCountry IN ('germany', 'Brazil')
 GROUP BY EmployeeID
 ORDER BY 2 DESC
-
-
 
 -- 20. Obtain a report by Salesperson that shows the number of orders and the 
 -- sales amount for each year of operations.
