@@ -34,7 +34,10 @@ ORDER BY COUNT(OrderID) ASC
 -- 18. Show the employees who have placed the most orders for the countries.
 -- Germany and Brazil.
 
-
+SELECT EmployeeID, ShipCountry, COUNT(OrderID) AS 'Many Orders'
+FROM Orders
+WHERE ShipCountry IN ('germany', 'Brazil')
+GROUP BY EmployeeID, ShipCountry
 
 -- 19. Obtain a report that shows the number of orders for each Sales Representative.
 
