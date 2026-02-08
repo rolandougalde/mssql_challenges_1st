@@ -26,6 +26,13 @@ FROM Customers
 WHERE Country = 'Mexico' OR Country = 'Spain' 
 AND NOT City = 'Madrid'
 
+-- Solved using clause IN.
+
+SELECT CompanyName, ContactTitle, City, Country
+FROM Customers
+WHERE Country IN ('Mexico', 'Spain')
+AND NOT City = 'Madrid'
+
 -- 14. Retrieve the list of orders, and display a column where a 10% tax is 
 -- calculated when the value of the Freight column is greater than or equal to 480.
 
