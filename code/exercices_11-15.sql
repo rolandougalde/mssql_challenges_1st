@@ -37,7 +37,7 @@ AND NOT City = 'Madrid'
 -- calculated when the value of the Freight column is greater than or equal to 480.
 
 SELECT OrderID, Freight,
-0.10 * Freight AS [Impuesto 10%]
+0.10 * Freight AS [10% Tax]
 FROM Orders
 WHERE Freight >= 480
 
