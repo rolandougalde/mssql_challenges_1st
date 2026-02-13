@@ -52,3 +52,9 @@ ORDER BY 2 DESC
 -- 20. Obtain a report by Salesperson that shows the number of orders and the 
 -- sales amount for each year of operations.
 
+-- Step 1: get data
+
+SELECT * FROM Employees
+SELECT * FROM Orders
+SELECT * FROM [Order Details]
+
