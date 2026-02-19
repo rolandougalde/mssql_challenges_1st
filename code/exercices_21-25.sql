@@ -66,3 +66,6 @@ FROM [Order Details] T1
 INNER JOIN Products T2 ON T2.ProductID = T1.ProductID
 INNER JOIN Categories T3 ON T3.CategoryID = T2.CategoryID
 GROUP BY T3.CategoryName
+ORDER BY 2 DESC
+
+-- End
