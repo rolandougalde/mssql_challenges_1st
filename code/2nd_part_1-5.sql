@@ -8,3 +8,13 @@ USE Northwind;
 -- Solved:
 
 SELECT * FROM Employees
+
+--2. Show the first and last names of the employees.
+
+-- Solved:
+
+SELECT 
+	FirstName, 
+	LastName ,
+	CONCAT(FirstName,  ' ', LastName) AS [Agent]
+FROM Employees
