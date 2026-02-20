@@ -18,3 +18,12 @@ SELECT
 	LastName ,
 	CONCAT(FirstName,  ' ', LastName) AS [Agent]
 FROM Employees
+
+--3. Show the names of the cities that appear in the Employees table.
+--(Do not show the same city name more than once).
+
+-- Solved
+
+SELECT 
+	DISTINCT City 	
+FROM Employees
