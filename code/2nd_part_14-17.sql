@@ -36,5 +36,18 @@ GROUP BY c.CategoryName
 ORDER BY UniqueCustomers DESC;
 
 --17. Show the total number of orders and the total amount for each of them.
+SELECT 
+	O.OrderID,
+	SUM(OD.Quantity * OD.UnitPrice) AS [Importe Total]
+FROM Orders O
+INNER JOIN [Order Details] OD ON OD.OrderID = O.OrderID
+GROUP BY O.OrderID
+
+-- Solved isun "SUM"
+SELECT
+	COUNT(O.OrderID) AS [Order Quantity],
+	SUM(OD.Quantity * OD.UnitPrice) AS [Total]
+FROM Orders O
+INNER JOIN [Order Details] OD ON OD.OrderID = O.OrderID
 
 -- END
